@@ -1,3 +1,5 @@
+# очередь реализованная на основе односвязного списка
+
 from llst import LinkedList
 
 
@@ -17,6 +19,6 @@ class MyQueue:
         return self.lined_list.len()
 
     def top(self):
-        tmp = self.pop()
+        res = self.pop()
         self.lined_list.push_front(tmp)
-        return tmp
+        return res

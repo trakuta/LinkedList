@@ -1,3 +1,5 @@
+# Стэк реализованный на основе односвязного списка
+
 from llst import LinkedList
 
 
@@ -17,6 +19,6 @@ class Stack:
         self.linked_list.show()
 
     def top(self):
-        tmp = self.pop()
-        self.push(tmp)
-        return tmp
+        res = self.pop()
+        self.push(res)
+        return res

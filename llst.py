@@ -1,16 +1,22 @@
+# сам односвязный список
+
 import random
 
 
 class LinkedList:
+
+# создание ноды в которой содержется значение и ссылка на следующее значение
     class Node:
         def __init__(self, val, next=None):
             self.val = val
             self.next = next
 
+# init содержит ноду и длинну списка для дальнейшего определения
     def __init__(self):
         self.head = self.Node(None)
         self.len = 0
 
+# вставить переменную в конец списка
     def push_back(self, val):
         tmp = self.Node(val)
         if self.len == 0:
@@ -22,6 +28,7 @@ class LinkedList:
             p.next = tmp
         self.len += 1
 
+# показать весь список
     def show(self):
         p = self.head.next
         print('head ', end='')
@@ -30,6 +37,7 @@ class LinkedList:
             p = p.next
         print('-> None')
 
+# вставить значение в начало списка
     def push_front(self, val):
         tmp = self.Node(val)
         if self.len == 0:
@@ -39,6 +47,7 @@ class LinkedList:
             self.head.next = tmp
         self.len += 1
 
+# удалить значание по номеру элемента
     def delete(self, val):
         p = self.head.next
         if p is None:
@@ -54,6 +63,7 @@ class LinkedList:
                 return
             p = p.next
 
+# удалить по значению, и вернуть в место вызова удалённое значение
     def pop(self, pos):
         p = self.head.next
         if self.len <= pos:
@@ -71,19 +81,11 @@ class LinkedList:
         self.len -= 1
         return poped
 
+# количество элементов в списке
     def length(self):
         return self.len
 
+# генератор случайного списка
     def generate(self, len):
         for i in range(len):
             self.push_front(random.randint(0, 100))
-
-
-def main():
-    llist = LinkedList()
-    llist.push_front(1)
-    llist.show()
-
-
-if __name__ == "__main__":
-    main()

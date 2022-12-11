@@ -90,10 +90,13 @@ class LinkedList:
         for i in range(len):
             self.push_front(random.randint(0, 100))
 
+
 def main():
     l_test = LinkedList()
     l_test.generate(5)
     l_test.show()
 
+
 if __name__ == '__main__':
     main()
+    

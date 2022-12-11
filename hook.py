@@ -1,7 +1,7 @@
 from stk import Stack as St
 
 stack = St()
-l = input('Введите скобки балят')
+l = input('Введите скобки')
 for c in l:
     if c == ')':
         if stack.top() is None:

@@ -62,6 +62,11 @@ class LinkedList:
                 self.len -= 1
                 return
             p = p.next
+        
+
+def delling():
+    pass
+
 
 # удалить по значению, и вернуть в место вызова удалённое значение
     def pop(self, pos):

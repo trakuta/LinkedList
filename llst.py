@@ -1,6 +1,8 @@
 # сам односвязный список
 # ego realizaciya
 
+#escho chto nibud'
+
 import random
 
 

@@ -1,4 +1,5 @@
 # сам односвязный список
+# ego realizaciya
 
 import random
 
@@ -101,7 +102,3 @@ def main():
     l_test.generate(5)
     l_test.show()
 
-
-if __name__ == '__main__':
-    main()
-    
